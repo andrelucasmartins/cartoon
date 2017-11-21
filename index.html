@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cartoon Network</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    
+    <div class="nav-top">
+        <div class="container">
+                <a href="#!" class="brand-logo">
+                <img src="./src/img/cnlogo_big.png" class="logo-cn" alt="Cartoon Network"></a>                
+        </div>
+    </div>
+<div class="menu">
+    <nav class="bg-white">
+        <div class="nav-wrapper">            
+            <div class="container">
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>    
+                <ul class=" hide-on-med-and-down">
+                    <li><a href="#home"><i class="material-icons left">home</i>Home</a></li>
+                    <li><a href="#jogos"><i class="material-icons left">videogame_asset</i>Jogos</a></li>
+                    <li><a href="#videos"><i class="material-icons left">play_circle_outline</i>Vídeos</a></li>
+                    <li><a href="#apps"><i class="material-icons left">phone_android</i>Apps</a></li>
+                    <li><a href="#programacao" class="active"><i class="material-icons left">watch_later</i>Programação</a></li>
+                </ul>
+                <ul class="side-nav blue" id="mobile-demo">
+                        
+                    <li><a href="#home"><i class="material-icons left">home</i>Home</a></li>
+                    <li><a href="#jogos"><i class="material-icons left">videogame_asset</i>Jogos</a></li>
+                    <li><a href="#videos"><i class="material-icons left">play_circle_outline</i>Vídeos</a></li>
+                    <li><a href="#apps"><i class="material-icons left">phone_android</i>Apps</a></li>
+                    <li class="link-activo"><a href=""><i class="material-icons left">watch_later</i>Programação</a></li>
+                    <li><a href="#guida-para-pais">Guia para pais</a></li>
+                    <li><a href="#dicas-de-seguraca">Dicas de Segurança</a></li>
+                    <li><a href="">Programação</a></li>
+                    <li><a href="#programacao-efetivamente-veiculada">Programação Efetivamente Veiculada</a></li>
+                    <li><a href="#programacao-efetivamente-veiculada-hd">Programação Efetivamente Veiculada(HD)</a></li>
+                    <li><a href="#ajuda">Ajuda</a></li> 
+                    <a href="#!" class="brand-logo">
+                            <img src="./src/img/cnlogo_big.png" class="logo-cn" alt="Cartoon Network">
+                    </a> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+        
+<div class="container main">
+    <div class="row">
+    <div class="section">
+        <div class="card-panel bg-blue">
+            <span class="text-white text-darken-2">
+                <h4>Segunda 18</h4>
+            </span>
+            </div>
+    </div>
+   
+        <div class="col m8 s12 hora">
+                <table class=" centered text-white" border="2">                
+                        <tbody class="hora-programacao">
+                            <tr>
+                                <td id="hp-00h"><a href="#!">00h</a></td>
+                                <td id="hp-01h"><a href="#!">01h</a></td>
+                                <td id="hp-02h"><a href="#!">02h</a></td>
+                                <td id="hp-03h"><a href="#!">03h</a></td>
+                                <td id="hp-04h"><a href="#!">04h</a></td>
+                            </tr>
+                            <tr>
+                                <td id="hp-05h"><a href="#!">05h</a></td>
+                                <td id="hp-06h"><a href="#!">06h</a></td>
+                                <td id="hp-07h"><a href="#!">07h</a></td>
+                                <td id="hp-08h"><a href="#!">08h</a></td>
+                                <td id="hp-09h"><a href="#!">09h</a></td>
+                            </tr>
+                            <tr>
+                                <td id="hp-10h"><a href="#!">10h</a></td>
+                                <td id="hp-11h"><a href="#!">11h</a></td>
+                                <td id="hp-12h" class="hora_ativa"><a href="#!">12h</a></td>
+                                <td id="hp-13h"><a href="#!">13h</a></td>
+                                <td id="hp-14h"><a href="#!">14h</a></td>
+                            </tr>
+                            <tr>
+                                <td id="hp-15h"><a href="#!">15h</a></td>
+                                <td id="hp-16h"><a href="#!">16h</a></td>
+                                <td id="hp-17h"><a href="#!">17h</a></td>
+                                <td id="hp-18h"><a href="#!">18h</a></td>
+                                <td id="hp-19h"><a href="#!">19h</a></td>
+                            </tr>
+                            <tr>
+                                <td id="hp-20h"><a href="#!">20h</a></td>
+                                <td id="hp-21h"><a href="#!">21h</a></td>
+                                <td id="hp-22h"><a href="#!">22h</a></td>
+                                <td id="hp-23h"><a href="#!">23h</a></td>
+                                <td id="hp-next"><i class="material-icons">navigate_next</i></td>
+                            </tr>
+                        </tbody>
+                      </table>
+        </div>
+        <div class="col m4 s12 bg-yellow" id="panel-programacao">
+            <h3 class="center-align text-white header" id="panel-hora">23h</h3>
+            <!-- Cards programação -->
+            <a class="modal-trigger" href="#modal1">
+                <div class="card horizontal hora-conteudo">
+                        <h3 class="center-align text-horizontal">23:00</h3>
+                    <div class="card-image">
+                        <img src="src/img/apenas-um-show.png">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                        <h5>Apenas um show</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="modal-trigger" href="#modal2">
+            <div class="card horizontal hora-conteudo">
+                    <h3 class="center-align text-horizontal">23:15</h3>
+                <div class="card-image">
+                    <img src="src/img/apenas-um-show.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                    <h5>Apenas um show</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="modal-trigger" href="#modal3">
+            <div class="card horizontal hora-conteudo">
+                    <h3 class="center-align text-horizontal">23:30</h3>
+                <div class="card-image">
+                    <img src="src/img/clarencio-o-otimista.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                    <h5>Clarencio o otimista</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="modal-trigger" href="#modal4">
+            <div class="card horizontal hora-conteudo">
+                    <h3 class="center-align text-horizontal">23:45</h3>
+                <div class="card-image">
+                    <img src="src/img/clarencio-o-otimista.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                    <h5>Clarencio o otimista</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+            <!-- modals sidebar direito-->
+        
+            <div id="modal1" class="modal bg-pink text-white modal-conteudo">
+                
+                <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-blue btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="person section bg-yellow">
+            <div class="person-circle circle-blue">
+                <img src="src/img/apenas-um-show.png">
+            </div>
+            <div class="bg-blue person-descricao center">
+                    <h5>Apenas um show</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                  <p>
+                        O programa tem como protagonistas dois zeladores de um parque: um gaio-azul de mais de 1,80 m de altura chamado Mordecai, e um guaxinim chamado Rigby. Mordecai e Rigby são melhores amigos que passam seus dias tentando se divertir, de todas as maneiras possíveis.
+                  </p>
+            </div>
+
+        <div class="modal-descricao">
+            <div class="modal-content">
+                    Hora de Inicio/Fim 22:30 - 23:00<br>         
+                    Ano de Produção 2016<br>          
+                    País de origen ESTADOS UNIDOS<br>            
+                    Classificação de Conteúdo 04            
+                    Classificação Indicativa 10 ANOS<br>            
+                    Gênero Animação,Comédia<br>            
+                    Diretor Jhon Iinfantino<br>            
+                    Casting J.G. Quintel<br> 
+            </div>
+        </div>
+                </div>
+
+                <div id="modal2" class="modal bg-pink text-white modal-conteudo">
+                
+                <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-blue btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="person section bg-yellow">
+            <div class="person-circle circle-blue">
+                <img src="src/img/apenas-um-show.png">
+            </div>
+            <div class="bg-blue person-descricao center">
+                    <h5>Apenas um show</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                  <p>
+                        O programa tem como protagonistas dois zeladores de um parque: um gaio-azul de mais de 1,80 m de altura chamado Mordecai, e um guaxinim chamado Rigby. Mordecai e Rigby são melhores amigos que passam seus dias tentando se divertir, de todas as maneiras possíveis.
+                  </p>
+            </div>
+
+        <div class="modal-descricao">
+            <div class="modal-content">
+                    Hora de Inicio/Fim 23:15 - 23:30<br>         
+                    Ano de Produção 2016<br>          
+                    País de origen ESTADOS UNIDOS<br>            
+                    Classificação de Conteúdo 04            
+                    Classificação Indicativa 10 ANOS<br>            
+                    Gênero Animação,Comédia<br>            
+                    Diretor Jhon Iinfantino<br>            
+                    Casting J.G. Quintel<br> 
+            </div>
+        </div>
+                </div>
+            <div id="modal3" class="modal bg-pink text-white modal-conteudo">                
+                <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-blue btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="person section bg-yellow">
+            <div class="person-circle circle-blue">
+                <img src="src/img/clarencio-o-otimista.png">
+            </div>
+            <div class="bg-blue person-descricao center">
+                    <h5>Clarêncio, o otimista</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                  <p>
+                        CLARÊNCIO, O OTIMISTA é um desenho que celebra o melhor da infância: as guerras épicas de lama, as paixões esquisitas, os combates na cama elástica, os sustos nos amigos durante a noite e as casas da árvore secretas! Tudo é narrado na visão de Clarêncio, um garoto animado e excêntrico que vê o lado bom de tudo. Quando todo mundo vira para a direita, Clarêncio vira para a esquerda... e dá de cara com uma parede. Mas ele segue adiante. Seu dia a dia é cheio de aventuras emocionantes e divertidas. E Clarêncio as compartilha com seus amigos - o descolado Sumo e o neurótico Jeff -, e com sua família ¿ formada por sua mãe espirituosa, Mary, e o namorado tranquilão dela, Chad. Ambientadas na charmosa e pequenina cidade de Aberdale, as histórias são inspiradas nos verdadeiros triunfos e tragédias da infância. Mas, nas mãos encardidas de Clarêncio, essas histórias sempre desviam da via principal ¿ quando não do mapa. Resumindo, CLARÊNCIO, O OTIMISTA traz uma porção de irreverência sincera, tirada diretamente do forno e servida em uma bandeja na frente da TV.
+                  </p>
+            </div>
+
+        <div class="modal-descricao">
+            <div class="modal-content">
+                    Hora de Inicio/Fim 23:30 - 23:45<br>         
+                    Ano de Produção 2014<br>                     
+                    País de origen ESTADOS UNIDOS<br>                    
+                    Classificação de Conteúdo 04<br>                     
+                    Classificação Indicativa 10 ANOS<br>                   
+                    Gênero Animação,Comédia<br>                   
+                    Diretor Nelson Boles<br>                    
+                    Casting Tom Kenny,Skyler Page,Sean Giambrone<br> 
+            </div>
+        </div>
+                </div>
+                <div id="modal4" class="modal bg-pink text-white modal-conteudo">
+                
+                <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-blue btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="person section bg-yellow">
+            <div class="person-circle circle-blue">
+                <img src="src/img/clarencio-o-otimista.png">
+            </div>
+            <div class="bg-blue person-descricao center">
+                    <h5>Clarêncio, o otimista</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                  <p>
+                        CLARÊNCIO, O OTIMISTA é um desenho que celebra o melhor da infância: as guerras épicas de lama, as paixões esquisitas, os combates na cama elástica, os sustos nos amigos durante a noite e as casas da árvore secretas! Tudo é narrado na visão de Clarêncio, um garoto animado e excêntrico que vê o lado bom de tudo. Quando todo mundo vira para a direita, Clarêncio vira para a esquerda... e dá de cara com uma parede. Mas ele segue adiante. Seu dia a dia é cheio de aventuras emocionantes e divertidas. E Clarêncio as compartilha com seus amigos - o descolado Sumo e o neurótico Jeff -, e com sua família ¿ formada por sua mãe espirituosa, Mary, e o namorado tranquilão dela, Chad. Ambientadas na charmosa e pequenina cidade de Aberdale, as histórias são inspiradas nos verdadeiros triunfos e tragédias da infância. Mas, nas mãos encardidas de Clarêncio, essas histórias sempre desviam da via principal ¿ quando não do mapa. Resumindo, CLARÊNCIO, O OTIMISTA traz uma porção de irreverência sincera, tirada diretamente do forno e servida em uma bandeja na frente da TV.
+                  </p>
+            </div>
+
+        <div class="modal-descricao">
+            <div class="modal-content">
+                    Hora de Inicio/Fim 23:15 - 23:30<br>         
+                    Ano de Produção 2014<br>                     
+                    País de origen ESTADOS UNIDOS<br>                    
+                    Classificação de Conteúdo 04<br>                     
+                    Classificação Indicativa 10 ANOS<br>                   
+                    Gênero Animação,Comédia<br>                   
+                    Diretor Nelson Boles<br>                    
+                    Casting Tom Kenny,Skyler Page,Sean Giambrone<br> 
+            </div>
+        </div>
+                </div>
+                
+                
+              </div>
+        </div>
+    </div>
+    <div class="section container carousel-container">
+            <div class="next left">
+                    <i class="material-icons">navigate_before</i>
+            </div>  
+        <div class="carousel card-items">
+                    
+                    <a class="carousel-item modal-trigger" href="#ben-10"><img src="src/img/ben10.png"></a>
+                    <a class="carousel-item modal-trigger" href="#apenas-um-show"><img src="src/img/apenas-um-show.png"></a>
+                    <a class="carousel-item modal-trigger" href="#coragem"><img src="src/img/coragem.png"></a>
+                    <a class="carousel-item modal-trigger" href="#hora_de_aventura"><img src="src/img/hora_de_aventura.png"></a>
+                    <a class="carousel-item modal-trigger" href="#mundo_de_gumball"><img src="src/img/mundo_de_gumball.png"></a>
+            
+        </div>
+        <div class="prev right">
+                <i class="material-icons">navigate_next</i>
+        </div>
+    </div>
+    <!-- modals carousel -->
+    <div id="apenas-um-show" class="modal bg-blue text-white modal-conteudo">
+            
+            <div class="modal-content">
+                <div class="row right">
+                    <a href="#!" class="modal-close waves-effect waves-light bg-pink btn-close">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+            </div>
+    <div class="person section bg-yellow">
+        <div class="person-circle circle-pink">
+            <img src="src/img/apenas-um-show.png">
+        </div>
+        <div class="bg-pink person-descricao center">
+                <h5>Apenas um show</h5>
+        </div>
+        <div class="bg-blue idade-conteudo center">
+                <h5>10</h5>
+        </div>
+    </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="day text-yellow center-align">
+                   <div class="week_day text-pink">
+                       Domingo <br>17
+                    </div>
+                    
+                    23:30               
+                </div>
+                <div class="day text-yellow center-align">
+                    <div class="week_day text-pink">
+                        Segunda <br>18
+                    </div>
+                    
+                    17:30
+                </div>
+                <div class="day text-yellow center-align">
+                    <div class="week_day text-pink">
+                        Terça <br>19
+                    </div>
+                    
+                    17:30
+                </div>
+                <div class="day text-yellow center-align">
+                    <div class="week_day text-pink">
+                            Quarta <br>20
+                    </div>
+                    
+                    17:30
+                </div>
+                <div class="day text-yellow center-align">
+                    <div class="week_day text-pink">
+                        Quinta <br>21
+                    </div>
+                    
+                    17:30
+                </div>
+                <div class="day text-yellow center-align">
+                    <div class="week_day text-pink">
+                        Sexta <br>22
+                    </div>
+                    
+                        17:30
+                </div>
+                <div class="day text-yellow center-align">
+                    <div class="week_day text-pink">
+                        Sábado <br>23
+                    </div>
+                    
+                    23:30
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ben-10" class="modal bg-blue text-white modal-conteudo">
+            <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-pink btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        <div class="person section bg-yellow">
+            <div class="person-circle circle-pink">
+                <img src="src/img/ben10.png">
+            </div>
+            <div class="bg-pink person-descricao center">
+                    <h5>Ben 10</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                    <div class="modal-content">
+                            <div class="row">
+                                <div class="day text-yellow center-align">
+                                   <div class="week_day text-pink">
+                                       Domingo <br>17
+                                    </div>
+                                    
+                                    23:30               
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Segunda <br>18
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Terça <br>19
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                            Quarta <br>20
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Quinta <br>21
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sexta <br>22
+                                    </div>
+                                    
+                                        17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sábado <br>23
+                                    </div>
+                                    
+                                    23:30
+                                </div>
+                            </div>
+                        </div>
+            </div>
+      </div>
+    </div>
+    <div id="coragem" class="modal bg-blue text-white modal-conteudo">
+            <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-pink btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        <div class="person section bg-yellow">
+            <div class="person-circle circle-pink">
+                <img src="src/img/Coragem.png">
+            </div>
+            <div class="bg-pink person-descricao center">
+                    <h5>Coragem</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                    <div class="modal-content">
+                            <div class="row">
+                                <div class="day text-yellow center-align">
+                                   <div class="week_day text-pink">
+                                       Domingo <br>17
+                                    </div>
+                                    
+                                    23:30               
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Segunda <br>18
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Terça <br>19
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                            Quarta <br>20
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Quinta <br>21
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sexta <br>22
+                                    </div>
+                                    
+                                        17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sábado <br>23
+                                    </div>
+                                    
+                                    23:30
+                                </div>
+                            </div>
+                        </div>
+            </div>
+      </div>
+    </div>
+    <div id="hora_de_aventura" class="modal bg-blue text-white modal-conteudo">
+            <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-pink btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        <div class="person section bg-yellow">
+            <div class="person-circle circle-pink">
+                <img src="src/img/hora_de_aventura.png">
+            </div>
+            <div class="bg-pink person-descricao center">
+                    <h5>Hora de Aventura</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                    <div class="modal-content">
+                            <div class="row">
+                                <div class="day text-yellow center-align">
+                                   <div class="week_day text-pink">
+                                       Domingo <br>17
+                                    </div>
+                                    
+                                    23:30               
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Segunda <br>18
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Terça <br>19
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                            Quarta <br>20
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Quinta <br>21
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sexta <br>22
+                                    </div>
+                                    
+                                        17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sábado <br>23
+                                    </div>
+                                    
+                                    23:30
+                                </div>
+                            </div>
+                        </div>
+            </div>
+      </div>
+    </div>
+    <div id="mundo_de_gumball" class="modal bg-blue text-white modal-conteudo">
+            <div class="modal-content">
+                    <div class="row right">
+                        <a href="#!" class="modal-close waves-effect waves-light bg-pink btn-close">
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                </div>
+        <div class="person section bg-yellow">
+            <div class="person-circle circle-pink">
+                <img src="src/img/mundo_de_gumball.png">
+            </div>
+            <div class="bg-pink person-descricao center">
+                    <h5>O incrível mundo de gumball</h5>
+            </div>
+            <div class="bg-blue idade-conteudo center">
+                    <h5>10</h5>
+            </div>
+        </div>
+            <div class="modal-content">
+                    <div class="modal-content">
+                            <div class="row">
+                                <div class="day text-yellow center-align">
+                                   <div class="week_day text-pink">
+                                       Domingo <br>17
+                                    </div>
+                                    
+                                    23:30               
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Segunda <br>18
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Terça <br>19
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                            Quarta <br>20
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Quinta <br>21
+                                    </div>
+                                    
+                                    17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sexta <br>22
+                                    </div>
+                                    
+                                        17:30
+                                </div>
+                                <div class="day text-yellow center-align">
+                                    <div class="week_day text-pink">
+                                        Sábado <br>23
+                                    </div>
+                                    
+                                    23:30
+                                </div>
+                            </div>
+                        </div>
+            </div>
+      </div>
+    </div>
+<footer class="page-footer bg-grey">
+    <div class="container">
+        <div class="row">
+        <div class="col l3 m3 s3">
+            <a href="#!" class="brand-logo">
+                    <img src="./src/img/cnlogo_big.png" class="logo-cn" alt="Cartoon Network">
+                </a>
+        </div>
+        <div class="col l9 m9 s12"></div>
+            <h5><p class="grey-text text-lighten-4">Jogos e vídeos grátis de Ben 10, Hora de Aventura com Finn e Jake, Apenas um Show, A Turma da Mônica, O incrível Mundo de Gumball, Steven universo, Titio Avô, Toorix e muito mais!</p></h5>
+        </div>
+        </div>
+    </div>
+<div class="footer-copyright footer-links-group">
+        <div class="row center footer-links-group">
+            <a href="#guida-para-pais" class="btn-flat text-white">Guia para pais</a>
+            <a href="#dicas-de-seguraca" class="btn-flat text-white">Dicas de Segurança</a>
+            <a href="" class="btn-flat text-white">Programação</a>
+            <a href="#programacao-efetivamente-veiculada" class="btn-flat text-white">Programação Efetivamente Veiculada</a>
+            <a href="#programacao-efetivamente-veiculada-hd" class="btn-flat text-white">Programação Efetivamente Veiculada(HD)</a>
+            <a href="#ajuda" class="btn-flat text-white">Ajuda</a>
+        </div>
+</div>
+
+</footer>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script src="dist/js/script.js"></script>
+</body>
+</html>

@@ -3,6 +3,8 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
     clean = require("gulp-clean"),
     cleanCSS = require("gulp-clean-css"),
+    es = require("event-stream"),
+    concat = require("gulp-concat"),
     browserSync = require("browser-sync").create();
 
     var reload = browserSync.reload;
@@ -25,19 +27,33 @@ var gulp = require("gulp"),
     });
 
     gulp.task("sass", function(){
-        return gulp.src("src/sass/**/*.scss")
+        return es.merge([
+            gulp.src([
+                'node_modules/materialize-css/dist/css/materialize.min.css'
+            ]),
+            gulp.src("src/sass/**/*.scss")
                 .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-                .pipe(cleanCSS())
-                .pipe(gulp.dest("dist/css"))
-                .pipe(browserSync.stream());
+                .pipe(cleanCSS()).pipe(browserSync.stream())
+        ])
+        .pipe(concat("all.min.css"))
+        .pipe(gulp.dest("dist/css"));
+                
             
     });
 
     gulp.task("js", function(){
-        return gulp.src("src/js/**/*.js")                
-                .pipe(uglify())
-                .pipe(gulp.dest("dist/js"))
-                .pipe(browserSync.stream());
+        return es.merge([
+            gulp.src([                    
+                'node_modules/jquery/dist/jquery.min.js',
+                'node_modules/materialize-css/dist/js/materialize.min.js'
+            ]),
+            gulp.src([
+                'src/js/**/*.js'
+            ]).pipe(concat('scripts.js')).pipe(uglify())
+            .pipe(browserSync.stream())
+        ])              
+        .pipe(concat("all.min.js"))              
+        .pipe(gulp.dest("dist/js"));
     });
 
 
